@@ -17,5 +17,7 @@ window.onload = function() {
     );
     $("btn_cancel").click(function(){
     	window.parent.close();
+    	//do nothing here
     });
+
 }
