@@ -11,9 +11,8 @@
 
 
 window.onload = function() {
-    $("#btn").click(
-        function() {
-            window.open("http://www.baidu.com")
+    $("#btn").click(function(){
+            window.open("http://www.baidu.com");
         }
     );
     $("btn_cancel").click(function(){
