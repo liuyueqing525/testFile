@@ -1,0 +1,54 @@
+<head lang="en">  
+    <meta charset="UTF-8">  
+    <title></title>  
+    <style>  
+        .con{width: 100px; height: 100px;background-color:royalblue;  
+            border:1px solid red; padding: 10px;}  
+        .con1{box-sizing: border-box;}  
+    </style>  
+    <script type="text/javascript">
+    
+
+var str="Hello world!"
+document.write(str.sub())
+var str="Hello world!"
+document.write(str.substring(3))
+var arr = new Array(6)
+arr[0] = "10"
+arr[1] = "5"
+arr[2] = "40"
+arr[3] = "25"
+arr[4] = "1000"
+arr[5] = "1"
+	document.write(arr.sort(function(a,b){
+		return b-a;
+	})+"</br>");
+
+	arr1 = ["10","5","40","25","1000","1"];
+	document.write(arr1.sort(function(a,b){
+		return b-a;
+	})+"</br>");
+	var guowang = {
+		name:"zhangsan",
+		age:"18",
+		sex:"male",
+		count:function(age,sex){
+			return this.age+this.sex;
+		}
+	}
+	document.write(guowang.name,guowang.age,guowang.sex+"</br>"+guowang.count(guowang.age,guowang.sex));
+
+	var i = 0,
+   arr = 'c,e,f,a,f,cc,aa'.split(',');
+arr.sort(function(a,b){ 
+    i++;console.log('第'+i+'次排序',a,b);
+    return a == b ? 0 : (a>b ? 1 : -1);  
+});
+
+	
+    </script>
+</head>  
+<body>  
+    <div class="con"></div>  
+    <div class="con con1"></div>  
+</body> 

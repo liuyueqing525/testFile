@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<style type="text/css">
+		.card{
+			background: #6cf;
+			width:200px;
+			padding: 10px;
+			margin: 5px;
+		}
+		.panel{
+			max-width: 300px;
+			border: 1px solid #999;
+			margin-bottom: 10px;
+		}
+		.panel >*{
+			padding:15px;
+		}
+		.panel .title{
+			border-bottom: 1px solid #999;
+		}
+		.panel .footer{
+		border-top: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<!-- <div>
+			<input v-model="length">mm
+			<br>
+			{{length |meter}}
+		</div>
+		<hr>
+		<div>
+		<input v-model="price">
+			{{price | currency('USD')}}
+		</div>-->
+		<panel>
+			YOOOOOOOOOOOOOOOOOO
+			QAQssss
+			<div slot="content">!@#!@#Sadasdqw</div>
+			<div slot="footer">bbuasubQAQ</div>
+		</panel>
+		<panel></panel>
+		<panel></panel>
+		<panel></panel>
+		<tooltip></tooltip>
+		<popup></popup>
+		<div v-pin:true.bottom.left="card1.pinned" class="card">
+			<a @click.prevent="card1.pinned=!card1.pinned" href="">定住/取消</a>
+			qwQAQfsfafqwWEASdadnis youd lai 
+		</div>
+		<div v-pin="card2.pinned" class="card">
+			qwQAQfsfafqwWEASdadnis youd lai 
+		</div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+		<div>qwQAQfsfafqwWEASdadnis youd lai </div>
+	</div> 
+	<template id="panel-tpl">
+			<div class="panel">
+				<div class="title">Yo`.....</div>
+				<div class="content"> 
+					<slot name="content"></slot>
+				</div>
+				<div class="footer"><slot name="footer"></slot>更多的消息......</div>
+			</div>
+			<div slot=""></div>
+	</template>
+</body>
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script> -->
+<script type="text/javascript" src="../lib/vue.js"></script>
+<script type="text/javascript" src="../js/vtest2.js" charset="UTF-8"></script>
+</html>

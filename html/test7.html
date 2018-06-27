@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Document</title>  
+    <style>  
+    .box {  
+        background-color: green;  
+        display: box;  
+        display: -moz-box;  
+        display: -webkit-box;  
+        display: -0-box;  
+        width: 100%;  
+    }  
+    .box .boxOne {  
+    background-color: white;  
+    -moz-box-flex:0;  
+    -webkit-box-flex:0;  
+    -0-box-flex:0;  
+    width: 200px;  
+    margin: 10px;  
+    }  
+    .box .boxTwo {  
+    background-color: white;  
+    -moz-box-flex:1;  
+    -webkit-box-flex:1;  
+    -0-box-flex:1;  
+    margin: 10px 0;  
+    }  
+    .box .boxThree {  
+    background-color: white;  
+    -moz-box-flex:1;  
+    -webkit-box-flex:1;  
+    -0-box-flex:1;  
+    margin: 10px;  
+    }  
+    </style>  
+</head>  
+<body>  
+    <div class="box">  
+        <div class="boxOne">column1</div>  
+        <div class="boxTwo">column2</div>  
+        <div class="boxThree">column3</div>  
+    </div>  
+</body>  
+</html>  

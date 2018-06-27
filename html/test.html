@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>测试</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding:0px;
+	}
+	div{
+		width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid #ff0000;
+	}
+</style>
+
+
+<body>
+	<div></div>
+	<p id="pid">hello!</p>
+	<button id="myBtn">anniu</button>
+	<button onclick="demo()">按钮</button>
+	<button id="sb">这是第二个按钮</button>
+</body>
+<script type="text/javascript">
+
+		
+	
+		
+			var x = document.getElementById("myBtn");
+		if(x!=null){
+		x.addEventListener("click", myFunction);
+		x.addEventListener("click", someOtherFunction);
+		function myFunction() 
+		{
+		    alert ("Hello World!")
+		}
+		function someOtherFunction() 
+		{
+		    alert ("该函数也将被执行!")
+		}
+	}
+
+		
+</script>
+</html>

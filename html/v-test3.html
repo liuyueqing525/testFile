@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录界面</title>
+    <style type="text/css">
+    .panel {
+        background: #aaa;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .content {}
+
+    .content span {
+        display: inline-block;
+        width: 60px;
+    }
+
+    .footer {}
+
+    .footer .login {
+        margin-left: 50px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="panel">
+            <div class="title">
+                QQ
+            </div>
+            <div class="content">
+                <span>用户名:</span>
+                <input type="text" v-model="username">
+                <br>
+                <span>密码：</span>
+                <input type="text" v-model="password">
+            </div>
+            <div class="footer">
+                <button id="btn" class="login" type="submit">登录</button>
+                <button id="btn_cancel" @click="close()">退出</button>
+            </div>
+        </div>
+    </div>
+    <div v-model="google" v-show="false"></div>
+    <div>
+        <ol>
+            <li class="intem3"></li>
+            <li class="intem4"></li>
+            <li class="intem5"></li>
+            <li class="intem6"></li>
+            <li class="intem7"></li>
+        </ol>
+    </div>
+    <a href="http://www.baidu.com">click.me</a>
+</body>
+<script type="text/javascript" src="../lib/vue.js"></script>
+<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../js/vtest3.js" charset="UTF-8"></script>
+
+</html>

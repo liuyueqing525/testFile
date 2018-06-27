@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>居居怪</title>
+	<script type="text/javascript">
+
+	//冒泡排序 		
+	//function bubbleSort(arr) {
+	// 	 		　　console.time('改进后冒泡排序耗时');
+
+	// 　　var len = arr.length;
+	// 　　for (var i = 0; i < len; i++) {
+	// 　　　　for (var j = 0; j < len - 1 - i; j++) {
+	// 　　　　　　if (arr[j] > arr[j+1]) { //相邻元素两两对比
+	// 　　　　　　　　var temp = arr[j+1]; //元素交换
+	// 　　　　　　　　arr[j+1] = arr[j];
+	// 　　　　　　　　arr[j] = temp;
+	// 　　　　　　}
+	// 　　　　}
+	// 　　}
+	// 　　return arr;
+	// }
+	// var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	// console.log(bubbleSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50] ；
+	// 　　console.timeEnd('改进后冒泡排序耗时');
+	
+	//希尔排序
+	// function	shellSort(arr){
+	// 	var len = arr.length,
+	// 	temp,
+	// 	gap = 1;
+	// 	console.time("希尔排序耗时:");
+	// 	while(gap <len/5){
+	// 		gap=gap*5+1;
+	// 	}
+	// 	for(gap;gap>0;gap=Math.floor(gap/5)){
+	// 		for(var i = gap;i<len;i++){
+	// 			temp=arr[i];
+	// 			for(var j =i-gap;j>=0&&arr[j]>temp;j-=gap){
+	// 				arr[j+gap]=arr[j];
+	// 			}
+	// 			arr[j+gap]=temp;
+	// 		}
+	// 	}
+	// 	console.timeEnd("希尔排序耗时:");
+	// 	return arr;
+	// }
+	// var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	// console.log(shellSort(arr));
+	
+
+	//快速排序
+	function quickSort(array,left,right){
+		console.time("快速排序耗时:");
+		if(left<right){
+			var x =array[right],i=left-1,temp;
+			for(var j=left;j<=right;j++){
+				if(array[j]<=x){
+					i++;
+					temp = array[i];
+					array[i]=array[j];
+					array[j]=temp;
+				}
+			}
+			console.log(array);
+			console.log(left,i);
+			quickSort(array,left,i-1);
+			console.log(array);
+			console.log(i,right);
+			quickSort(array,i+1,right);
+		}
+		console.timeEnd("快速排序耗时:");
+		console.log(array);
+		return array;
+
+	}
+	var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	var a  = quickSort(arr,0,arr.length-1);
+	console.log(a)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

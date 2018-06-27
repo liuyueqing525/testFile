@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*Array.prototype.in_array = function (e) { 
+		　　for (i = 0; i < this.length; i++) { 
+		　　　　if (this[i] == e) 
+		　　　　return true; 
+		　　} 
+		　　return false; 
+		}
+		var arr = new Array(1,2,3,4,5,6,7,8,9,10);
+		var c = arr.in_array(3);
+		console.log(c);
+		var reg=/^[A-Za-z]\w{4,19}$/;
+        alert(reg.test("avcd12345"));*/
+
+        /*function a(){
+		  var n = 0;
+		  function inc(){
+		    n++; 
+		    console.log(n);
+		  }
+		  return inc;
+		}
+		var c = new a();
+		c();  //控制台输出1
+		c();  //控制台输出2*/
+		/*function createFunctions(){
+		  var result = new Array();
+		  for (var i=0; i < 10; i++){
+		    result[i] = function(){
+		      return i;
+		  		console.log(result[i]);
+		    };
+		  }
+		  return result;
+
+		}
+		var funcs = createFunctions();
+		for (var i=0; i < funcs.length; i++){
+		  console.log(funcs[i]());
+		}*/
+	/*	function f1(){
+
+	　　　　var n=999;
+
+	　　　　nAdd=function(){n+=1}
+
+	　　　　function f2(){
+	　　　　　　alert(n);
+	　　　　}
+
+	　　　　return f2;
+
+	　　}
+
+	　　var result=f1();
+
+	　　result(); // 999
+
+	　　nAdd();
+
+	　　result(); // 1000*/
+	var name = "The Window";
+
+　　var object = {
+　　　　name : "My Object",
+
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+
+　　　　}
+
+　　};
+
+　　alert(object.getNameFunc()());
+
+　　var name = "The Window";
+
+　　var object = {
+　　　　name : "My Object",
+
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+
+　　　　}
+
+　　};
+
+　　alert(object.getNameFunc()());
+
+	  function click(){
+
+		var a = "click";
+		function inc(){
+			console.log(a);	
+			}
+			return inc();
+	}
+	var result1 = new click();
+	
+	</script>
+</head>
+
+<body>
+	<input type="form" name="123" id="good"	value="112">
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

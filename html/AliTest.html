@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Title</title>
+    <style>
+        *{padding:0;margin:0;}
+        .head,li div{
+            display: inline-block;text-align: center;
+        }
+        li{margin-top:10px;}
+        li .id,li .sex,.id,.sex{width:50px;}
+        li .name,.name{width:40px;}
+        li .tel,.tel{width:120px;}
+        li .province,.province{
+            width:60px;
+        }
+        li .del,.del{width:50px;}
+        ul{list-style: none;}
+        .user-delete{cursor: pointer;}
+    </style>
+</head>
+<body>
+<div id="J_container">
+    <div class="record_head">
+        <div class="head id">序号</div>
+        <div class="head name">姓名</div>
+        <div class="head sex">性别</div>
+        <div class="head tel">电话</div>
+        <div class="head province">省份</div>
+        <div class="head">操作</div>
+    </div>
+    <ul id="J_List">
+        <li><div class="id">1</div><div class="name">张三</div><div class="sex">男</div><div class="tel">13788888888</div><div class="province">浙江省</div><button class="del">删除</button></li>
+        <li><div class="id">2</div><div class="name">李四</div><div class="sex">女</div><div class="tel">13788887777</div><div class="province">四川省</div><button class="del">删除</button></li>       
+        <li><div class="id">3</div><div class="name">王二</div><div class="sex">男</div><div class="tel">13788889999</div><div class="province">广东省</div><button class="del">删除</button> </li>
+    </ul>
+</div>
+<script>
+    // 此处也可换成ES6的写法
+    class Contact{
+        constructor(rootId) {
+            this.data = [];
+            this.root = document.getElementById(rootId);
+            this.ids = [];
+            this.names = [];
+            this.sexs = [];
+            this.tels = [];
+            this.provinces = [];
+            this.evts = [];
+        }
+        initData(){
+            this.lis = this.root.querySelectorAll('li');
+            this.ids = this.getDataArr(this.root.querySelectorAll('.id'));
+            this.names = this.getDataArr(this.root.querySelectorAll('.name'));
+            this.sexs = this.getDataArr(this.root.querySelectorAll('.sex'));
+            this.tels = this.getDataArr(this.root.querySelectorAll('.tel'));
+            this.provinces = this.getDataArr(this.root.querySelectorAll('.province'));
+            this.loadDataFromArr();
+            this.initEvent();
+        }
+        loadDataFromArr() {
+            let len = this.ids.length;
+            for(let i = 0; i < len ;i++) {
+                let obj = {
+                    id:this.ids[i],
+                    name:this.names[i],
+                    sexs: this.sexs[i],
+                    tels: this.tels[i],
+                    provinces: this.provinces[i]
+                };
+                this.addItem(obj);
+            }
+
+        }
+        getDataArr(arr){
+            let dataArr = [];
+            for(let i = 0; i < this.lis.length; i++) {
+                dataArr.push(arr[i].textContent);
+            }
+            return dataArr;
+        }
+        addItem(item) {
+            this.data.push(item);
+        }
+        initEvent() {
+            this.evts = this.root.querySelectorAll('.del');
+            this.handleDel = this.handleDel.bind(this);
+            for(let i = 0; i < this.evts.length; i++) {
+                this.evts[i].onclick = this.handleDel;
+            }
+        }
+        handleDel(event) {
+            this.lis = this.root.querySelectorAll('li'); // update
+            this.evts = this.root.querySelectorAll('.del');
+            for(let i = 0 ;i < this.lis.length ; i++) {
+                if(event.target === this.evts[i]) {
+                    console.log(this.lis[i],this.evts[i]);
+                    this.delItem(i,this.lis[i]);
+                }
+            }
+        }
+        delItem(index,target){
+            console.log(index);
+            this.data.splice(index+1,1);
+            this.root.removeChild(target);
+        }
+    } 
+    let contact = new Contact('J_List');
+    contact.initData();
+</script>
+</body>
+</html>

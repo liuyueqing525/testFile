@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试dom和jq对象</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			 var a = document.getElementById('class');
+			 $div = $(a);
+			 var b = $div.html("ggg").html();
+			 alert();
+			 console.log(b);
+			/*var $v = $("#class");
+			var v =$v.get(0);
+			alert(v.innerHTML='gooose');*/
+			console.log("2021-21-21".replace((/(\d{4})-(\d{2})-(\d{2})/g),"X"));
+
+		reg3=/\w/;
+		reg4=/\w/gim;
+		})
+		var reg1=/\w/;
+			var reg2=/\w/gim;
+			while(reg2.test("ab")){
+				console.log(reg2.lastIndex);
+			}
+</script>
+<style type="text/css">
+	#class{
+		color:red;
+	}
+</style>
+<body>
+	<div id="class">woshiceshid </div>
+</body>
+</html>

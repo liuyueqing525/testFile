@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>dododo</title>
+	<style>
+	 *{margin:0;padding:0;}
+    </style>
+    <script>
+	let start = Date.now()
+	let str = ''
+	let newUlEle = document.createElement('ul')
+	document.body.appendChild(newUlEle)
+	for (let i = 0; i < 10000; i++) { 
+		str += '<li>第' + i + '个子节点</li>' 
+	} 
+	newUlEle.innerHTML = str 
+	console.log('耗时' + (Date.now() - start) + 'ms');
+	</script>
+
+</head>
+<body>
+	<div class="head">亲，您好！<input type="button" value="登 录" id="login"></div>
+	<div id="login_box">
+		<p>用户登录</p><span id="close"></span>
+	</div>
+</body>
+</html>

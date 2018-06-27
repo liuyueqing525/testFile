@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<style>
+	table{
+	    border:1px solid;
+	    margin:0 auto;
+	}
+</style>
+	<script type="text/javascript">
+		var concu = function(del,tax){
+			this.del = del;
+			this.tax = tax;
+		}
+		var mul = "@123"+"\n"+"@456"+"\n"+"@789"
+		concu.prototype = {
+			add:function(a,b){
+				return a+b;
+			},
+			sub:function(a,b){
+				return a-b;
+			}
+		}
+		alert(new concu().add(5,3));
+		var fn  = function(a,b){
+			console.log(a-b);
+		}(1,2);
+		var a = "10";
+	    var b = 10;
+	    if (a == b)
+	        alert("equal");
+	    if (a === b)
+	        alert("same");
+	</script>
+</head>
+<body>
+    <div style="float:left;">div text</div>
+    <p style="clear:left;">p text</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueTest</title>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		var app=new vue({
+			el:'app',
+			data:{
+				message:'hello world!'
+			}
+		})
+	</script> -->
+	<!-- <script type="text/javascript" >
+		window.onload= function(){
+			var json=[];
+			var j={};
+			for(var i=0;i<=10;i++){
+				j.name="json";
+				j.cars="22";
+				j.obj=i;
+				json.push(j);
+			}
+			alert(json);
+			var a =JSON.stringify(json);
+			alert(a);
+		}
+	</script> -->
+	<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+	<script type="text/javascript">
+			window.onload=function(){
+			new Vue({
+			  el: '#app',
+			  data: {
+			    message: 'Hello aaa.js!'
+			  }
+			})
+			}
+	</script>
+</head>
+<body>
+	<div id="app">
+		{{message}}
+	</div>
+</body>
+
+</html>

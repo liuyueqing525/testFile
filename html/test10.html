@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jqTest</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+	<script>
+	$.noConflict();
+	jQuery(document).ready(function(){
+	  jQuery("button").click(function(){
+	    jQuery("p").text("jQuery 仍在运行！");
+	  });
+	});
+	for(var  i = 0;i < 10;i++){
+    (function(ii){
+        setTimeout(function(){            
+            console.log(ii);
+        },1000);
+    })(i)
+}
+function class1(){   
+  this.name=function(){   
+    console.log("我是class1内的方法");   
+  }   
+}   
+function class2(){ 
+  class1.call(this);  //此行代码执行后，当前的this指向了class1（也可以说class2继承了class1）   
+}   
+
+var f=new class2();   
+f.name();   //调用的是class1内的方法，将class1的name方法交给class2使用
+
+function eat(x,y){   
+  console.log(x+y);   
+}   
+function drink(x,y){   
+  console.log(x-y);   
+}   
+eat.call(drink,3,2);
+
+function Animal(name){   
+  this.name=name;   
+  this.showName=function(){   
+    console.log(this.name);   
+  }   
+}   
+function Dog(name){   
+  Animal.call(this,name);   
+}   
+var dog=new Dog("Crazy dog");   
+dog.showName();
+var a = document.getElementById("class");
+var $a = $(a);
+	$a.css('color','red');
+</script>
+</head>
+
+<body>
+<p>这是一个段落。</p>
+<button>测试 jQuery</button>
+<div id="class">我是测试dom对象的</div>
+</body>
+</html>

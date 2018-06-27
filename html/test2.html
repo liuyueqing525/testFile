@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	/*for (var i = 0; i < 5; i++) {
+	 (function(j) { // j = i
+	  setTimeout(function() {
+	   console.log(new Date, j);
+	  }, 1000);
+	 })(i);
+	}
+	 
+	console.log(new Date, i); */
+	
+	/*for (let i = 0; i < 5; i++) {
+	 setTimeout(function() {
+	  console.log(new Date, i);
+	 }, 1000);
+	}	 
+	console.log(new Date, i);*/
+	/*for (var i = 0; i < 5; i++) {
+	 (function(j) {
+	  setTimeout(function() {
+	   console.log(new Date, j);
+	  }, 1000 * j); // 这里修改 0~4 的定时器时间
+	 })(i);
+	}
+	 
+	setTimeout(function() { // 这里增加定时器，超时设置为 5 秒
+	 console.log(new Date, i);
+	}, 1000 * i);*/
+
+	/*function a(){
+    var user = "追梦子";
+    console.log(this.user); //undefined
+    console.log(this);　　//Window
+	}
+	window.a();
+
+	var o = {
+    user:"追梦子",
+    fn:function(){
+
+        console.log(this.user); //追梦子
+        console.log(this)
+    }
+}
+window.o.fn();
+o.fn();*/
+
+	/*var foo = "test";
+
+	if(true){
+		var foo = "new test";
+	}
+
+	alert(foo == "new test");
+
+	function test (){
+		var foo = "old test";
+	}
+	test();
+	alert(foo =="new test");
+	console.log(foo =="new test")*/
+
+	/*var test  = 'test';
+
+	alert(window.test==test);
+	console.log( window.test)
+	console.log(window)*/
+	/*
+		function test(){
+			foo = "test";
+		}
+
+		test();
+
+		alert(window.foo == "test");*/
+		/*var obj = document.getElementById("main");
+
+		obj.style.border = "1px solid red";
+
+		setTimeout(function(){
+			obj.style.display = 'none';
+		},1000);
+
+		function delayedAlert(msg ,time){
+
+			setTimeout(function(){
+				alert(msg);
+			},time);
+		}
+		delayedAlert("welcome!",2000);*/
+
+		/*function addGenerator( num ){
+			return function( toAdd ){
+				return num + toAdd;
+			};
+		};
+
+		var addFive = addGenerator( 5 );
+
+		alert( addFive(4) == 9);
+		console.log(addFive(4));*/
+/*
+		(function(){
+
+			var msg = "Thanks for visisting !!";
+
+			window.onunload = function(){
+				alert( msg );
+				console.log( msg );
+			};
+
+		})();*/
+
+		/*var obj = document.getElementById("main");
+
+		var items = ["click ","keypress"];
+
+		for (var i = 0; i<items.length;i++){
+			(function(){
+				var item = items[i];
+
+				obj["on"+item] = function(){
+
+					alert("Thanks for your"+ item);
+
+				};
+			})();
+		}*/
+		var obj ={
+			yes:function(){
+				this.val = true;
+			},
+			no:function(){
+				this.val = false;
+			}
+		};
+		alert( obj.val ==null);
+
+		obj.yes();
+
+		alert( obj.val ==true);
+
+		window.no = obj.no;
+		window.no();
+
+		alert(obj.val ==true);
+
+		alert(window.val ==false);
+		
+</script>
+<body>
+
+</body>
+</html>

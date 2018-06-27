@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>这是一个测试demo</title>
+</head>
+<script type="text/javascript">
+	window.onload =function(){
+		var a =document.firstChild.nodeType;
+		console.log(a);
+		for(let i=0;i<=10;i++){
+			
+				setTimeout(function(){console.log(new Date(),i)},1000*i);
+			
+		}
+		for(var j=1;j<=3;j++){
+			(function(j){
+				setTimeout(function(){
+					console.log(new Date(),j+"j");
+				},1000*j)
+			})(j)
+		}
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		btn2.onmouseover=function(){
+			btn2.innerHTML = "我爱你";
+			btn1.innerHTML = "我不爱你";
+		}
+		btn2.onmouseout=function(){
+			btn2.innerHTML = "我不爱你";
+			btn1.innerHTML = "我爱你";
+		}
+		var  btn = document.getElementsByTagName("button");
+		for(var i=0;i<btn.length;i++){
+			btn[i].onclick=function(){
+				alert("谢谢你的喜欢！我也爱你，么么哒！");
+			}
+		}
+		
+	}
+		
+</script>
+<style type="text/css">
+	button{
+		width:100px;
+		height:50px;
+		line-height: 25px;
+		text-align: center;
+		margin:10px;
+		color: #fff;
+		background-color: #6cf;
+	}
+	.word{
+		text-align: center;
+		color: red;
+	}
+	.center{
+		margin:auto;
+		width: 10%;
+	}
+</style>
+<body>
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class="word">对你的阿月师父说一句我爱你可以吗！！</div>
+						<div class="center">
+							<button id="btn1">我爱你</button>
+						</div>
+						<div class="center">
+							<button id="btn2">我不爱你</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

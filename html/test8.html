@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>    
+<meta charset="UTF-8">     
+<title>BFC</title>     
+<script type="text/javascript"	async="async" defer="defer" charset="UTF-8">
+	var arr=[5,100,6,3,-12];
+	var result=arr.sort(function(a,b) {
+	    return a-b;
+	});
+	console.log(result);
+</script>
+<style type="text/css">
+*{
+	padding: 0;margin: 0;
+}
+
+.clearfix{
+	zoom: 1;
+}
+.fl{
+	float: left;
+}
+.clearfix:after{
+	content: "";
+	display: block;visibility: hidden;height: 0;line-height: 0;clear: both;
+}
+.p1 {background-color: #FCE38A; width: 400px; height: 100px; line-height: 100px;text-align: center; margin: 0 auto;padding: 10px;border: 1px solid #6cf;}        
+.p2 {background-color: #EAFFD0; width: 400px; height: 100px; margin-top: 50px;margin-bottom: 50px;}         
+.p3 {background-color: #95E1D3; width: 400px; height: 100px;}  
+</style> 
+</head>  
+<body>
+	<div>     
+		<div class="p1">p1</div>    
+		<div style="background: red;" class="clearfix">
+			<div class="p2 fl">p2</div>  
+			<div class="p3 fl">p3</div>
+		</div>
+	</div>
+</body>
+</html>
